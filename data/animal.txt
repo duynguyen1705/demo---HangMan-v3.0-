@@ -13,7 +13,7 @@ blackbird
 canary
 crow
 cuckoo
-dove,
+dove
 pigeon
 duck
 eagle
@@ -52,8 +52,6 @@ turkey
 vulture
 woodpecker
 wren
-peacock butterfly
-red admiral
 silkworm
 swallowtail
 barbel
@@ -92,7 +90,6 @@ grasshopper
 harvestman
 ladybug
 larva
-louse (pl. lice)
 maggot
 midge
 moth
@@ -109,17 +106,13 @@ bullock
 camel
 chimpanzee
 dachshund
-deer, hart
 dolphin
 elephant
-elk , moose 
 fox
 gazelle
 gerbil
 giraffe
 goat
-grizzly bear
-guinea pig
 hamster
 hare
 hare
@@ -138,13 +131,10 @@ mouse
 mule
 otter
 panda
-pig, hog
 platypus
-polar bear
 polecat
 pony
 porcupine
-prairie dog
 puma
 racoon
 rat
@@ -166,25 +156,17 @@ snail
 blindworm
 boa
 chameleon
-constrictor snake
 copperhead
-coral snake
 cottonmouth
 crocodile
-diamondback rattlesnake
 gecko
 iguana
 lizard
-Mojave rattlesnake
-poisonous / venomous snake
 python
 salamander
 saurian
-sea snake
 sidewinder
 snake
-Southern Pacific rattlesnake
-tortoise, turtle
 tapeworm
 leech
 earthworm
