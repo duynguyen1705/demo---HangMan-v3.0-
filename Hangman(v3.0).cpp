@@ -28,20 +28,20 @@ int main()
     string guessedWord = string(computerWord.length(), '-');
     int wrongCount = 0;
     do{
-        printFigure(wrongCount);
         renderGame(guessedWord);
+        printFigure(wrongCount);
         char guessWord = readGuessWord();
         if (check(computerWord, guessWord)){
             guessedWord = update(guessedWord, guessWord, computerWord);
         }
         else{
-            cout << guessWord << " is not true" << endl;
             wrongCount ++;
         }
 
     }while(wrongCount < maxWrongCount && guessedWord != computerWord);
 
     if (wrongCount == 7) printFigure(7);
+    if  (guessedWord == computerWord) cout << computerWord << " is true. Nice bro!!" << endl;
     printResult();
 
 }
@@ -88,9 +88,15 @@ void printResult()
     cout << "Game Over!";
 }
 
+void clearScreen() {
+    const int PATCH_LINES = 30;
+	for (int i = 0; i < PATCH_LINES; i++) cout << endl;
+}
+
 void renderGame(string guessedWord)
 {
-    cout << guessedWord;
+    clearScreen();
+    cout << guessedWord << endl;
 }
 
 char readGuessWord()
@@ -98,7 +104,7 @@ char readGuessWord()
     char c;
     cout << "Enter your guess: ";
     cin >> c;
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // xóa buffer
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // x�a buffer
     return c;
 }
 
@@ -176,3 +182,4 @@ string getTopic()
 
     return topic;
 }
+
