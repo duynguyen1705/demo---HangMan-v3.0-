@@ -10,9 +10,6 @@
 
 using namespace std;
 
-const char flower[] = "data/flower.txt";
-const char animal[] = "data/animal.txt";
-const char sport[] = "data/sport.txt";
 const int maxWrongCount = 7;
 void printFigure(int wrongCount);
 string chooseWord(string topic);
@@ -42,7 +39,7 @@ int main()
             wrongCount ++;
         }
 
-    }while(wrongCount < maxWrongCount && guessedWord == computerWord);
+    }while(wrongCount < maxWrongCount && guessedWord != computerWord);
 
     if (wrongCount == 7) printFigure(7);
     printResult();
@@ -58,7 +55,8 @@ string getLowerCaseString (string& s)
 string chooseWord(string topic)
 {
     vector<string> wordList;
-    ifstream file(topic);
+    string nfile = "data/" + topic + ".txt";
+    ifstream file(nfile);
     if(file.is_open()){
         string word;
         while(file >> word){
@@ -100,7 +98,7 @@ char readGuessWord()
     char c;
     cout << "Enter your guess: ";
     cin >> c;
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // xóa buffer
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // xÃ³a buffer
     return c;
 }
 
@@ -172,7 +170,7 @@ string getTopic()
     string topic;
 
     do{
-        cout << "Enter your topic you want(flower, animal, food, country, sport): ";
+        cout << "Enter your topic you want(flower, animal, sport): ";
         cin >> topic;
     }while(topic != "flower" && topic != "animal" && topic != "sport");
 
