@@ -40,7 +40,10 @@ int main()
 
     }while(wrongCount < maxWrongCount && guessedWord != computerWord);
 
-    if (wrongCount == 7) printFigure(7);
+    if (wrongCount == 7) {
+	    printFigure(7);
+	    cout << computerWord << "is the true word!!";
+    }
     if  (guessedWord == computerWord) cout << computerWord << " is true. Nice bro!!" << endl;
     printResult();
 
